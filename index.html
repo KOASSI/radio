@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Radio en Ligne</title>
+    <link href="css/essaie.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Ma Radio</h1>
+        <p>Écoutez la meilleure programmation musicale</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Programmation</a></li>
+            <li><a href="#">Émissions</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="player-container">
+            <div class="on-air">
+                <div class="on-air-indicator"></div>
+                <span>EN DIRECT</span>
+            </div>
+            <h2>Maintenant à l'antenne GOSPEL</h2>
+            <p>Émission spéciale - Hits du moment gospel</p>
+            
+            <div class="player-controls">
+                <button class="play-button">Écouter</button>
+            </div>
+            
+            <div class="volume-control">
+                <label for="volume">Volume:</label>
+                <input type="range" id="volume" name="volume" min="0" max="100">
+            </div>
+        </div>
+
+        <h2>Programmation</h2>
+        <div class="program-grid">
+            <div class="program-card">
+                <div class="program-image" style="background-image: url('image/radio.jpg')"></div>
+                <div class="program-info">
+                    <div class="program-time">10:00 - 12:00</div>
+                    <h3 class="program-title">Nostagie du Matin</h3>
+                    <p>Le meilleur pour commencer votre journée</p>
+                </div>
+            </div>
+            
+            <div class="program-card">
+                <div class="program-image" style="background-image: url('image/radio.jpg')"></div>
+                <div class="program-info">
+                    <div class="program-time">14:00 - 16:00</div>
+                    <h3 class="program-title">Nostagie du Soir</h3>
+                    <p>Musique lounge et interviews</p>
+                </div>
+            </div>
+            
+            <div class="program-card">
+                <div class="program-image" style="background-image: url('image/radio.jpg')"></div>
+                <div class="program-info">
+                    <div class="program-time">18:00 - 20:00</div>
+                    <h3 class="program-title">Nostagie de nuit</h3>
+                    <p>Les tubes du moment</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        </div>
+        <p>&copy; 2023 Ma Radio. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Font Awesome pour les icônes -->
+    <script src="javascript.js" crossorigin="anonymous"></script>
+</body>
+</html>
