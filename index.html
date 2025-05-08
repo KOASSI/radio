@@ -1,86 +1,226 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma Radio en Ligne</title>
-    <link href="css/essaie.css" rel="stylesheet">
+    <title>Blog de Webradio</title>
+    <link rel="stylesheet" href="css/radio.css">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
-        <h1>Ma Radio</h1>
-        <p>Écoutez la meilleure programmation musicale</p>
+        <nav class="nav-container">
+            <div class="logo">
+                <i class="fas fa-broadcast-tower fa-2x"></i>
+                <h1>Radio Pulse</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="radio.html">Accueil</a></li>
+                <li><a href="#">Émissions</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Podcasts</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Programmation</a></li>
-            <li><a href="#">Émissions</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <div class="on-air">
+                    <div class="on-air-indicator"></div>
+                    <span>EN DIRECT</span>
+                </div>
+                <h2>Bienvenue sur le Blog de Radio GOSPEL</h2>
+                <p>Découvrez les dernières actualités musicales, interviews exclusives et récits des coulisses 
+                    de votre webradio préférée.</p>
+                <a href="#" class="btn">Écouter en direct <i class="fas fa-play"></i></a>
+            </div>
+            <div class="hero-image">
+                <img src="image/radio.jpg" alt="Radio Studio">
+            </div>
+        </section>
 
-    <div class="container">
-        <div class="player-container">
-            <div class="on-air">
-                <div class="on-air-indicator"></div>
-                <span>EN DIRECT</span>
-            </div>
-            <h2>Maintenant à l'antenne GOSPEL</h2>
-            <p>Émission spéciale - Hits du moment gospel</p>
-            
-            <div class="player-controls">
-                <button class="play-button">Écouter</button>
-            </div>
-            
-            <div class="volume-control">
-                <label for="volume">Volume:</label>
-                <input type="range" id="volume" name="volume" min="0" max="100">
-            </div>
-        </div>
-
-        <h2>Programmation</h2>
-        <div class="program-grid">
-            <div class="program-card">
-                <div class="program-image" style="background-image: url('image/radio.jpg')"></div>
-                <div class="program-info">
-                    <div class="program-time">10:00 - 12:00</div>
-                    <h3 class="program-title">Nostagie du Matin</h3>
-                    <p>Le meilleur pour commencer votre journée</p>
+        <section class="featured-posts">
+            <h2 class="section-title">À la Une</h2>
+            <div class="featured-post">
+                <div class="featured-image">
+                    <img src="image/radio.jpg" alt="Article à la une">
+                </div>
+                <div class="featured-content">
+                    <span class="card-tag">Interview</span>
+                    <h3 class="featured-title">Interview exclusive avec DJ Electro</h3>
+                    <p class="featured-excerpt">DJ Electro nous dévoile ses influences, son processus créatif et ses projets à venir dans cette interview exclusive pour Radio Pulse.</p>
+                    <p class="card-meta">
+                        <span><i class="far fa-calendar"></i> 25 avril 2025</span>
+                        <span><i class="far fa-comment"></i> 24 commentaires</span>
+                    </p>
+                    <a href="#" class="btn">Lire l'article</a>
                 </div>
             </div>
-            
-            <div class="program-card">
-                <div class="program-image" style="background-image: url('image/radio.jpg')"></div>
-                <div class="program-info">
-                    <div class="program-time">14:00 - 16:00</div>
-                    <h3 class="program-title">Nostagie du Soir</h3>
-                    <p>Musique lounge et interviews</p>
+            <div class="featured-post">
+                <div class="featured-image">
+                    <img src="image/radio.jpg" alt="Festival de musique">
+                </div>
+                <div class="featured-content">
+                    <span class="card-tag">Événement</span>
+                    <h3 class="featured-title">Festival Soundwave 2025 : Tout ce que vous devez savoir</h3>
+                    <p class="featured-excerpt">Préparez-vous pour le plus grand festival de l'été ! Notre guide complet sur
+                         les artistes, la programmation et les conseils pour en profiter au maximum.</p>
+                    <p class="card-meta">
+                        <span><i class="far fa-calendar"></i> 20 avril 2025</span>
+                        <span><i class="far fa-comment"></i> 16 commentaires</span>
+                    </p>
+                    <a href="#" class="btn">Lire l'article</a>
                 </div>
             </div>
-            
-            <div class="program-card">
-                <div class="program-image" style="background-image: url('image/radio.jpg')"></div>
-                <div class="program-info">
-                    <div class="program-time">18:00 - 20:00</div>
-                    <h3 class="program-title">Nostagie de nuit</h3>
-                    <p>Les tubes du moment</p>
-                </div>
-            </div>
-        </div>
-    </div>
+        </section>
 
-    <footer>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
-            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
-            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        <section class="blog-section">
+            <h2 class="section-title">Articles Récents</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="/api/placeholder/400/300" alt="Artiste en concert">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Critique</span>
+                        <h3 class="card-title">Critique du dernier album de MORIJAH</h3>
+                        <p class="card-excerpt">Un voyage sonore entre rêve et réalité qui marque un tournant dans
+                             la carrière de l'artiste.</p>
+                        <p class="card-meta">
+                            <span><i class="far fa-calendar"></i> 15 avril 2025</span>
+                            <span><i class="far fa-comment"></i> 9 commentaires</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="/api/placeholder/400/300" alt="Studio d'enregistrement">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Technologie</span>
+                        <h3 class="card-title">Les meilleurs équipements pour créer votre home studio</h3>
+                        <p class="card-excerpt">Découvrez notre sélection d'équipements essentiels pour monter votre studio 
+                            à domicile.</p>
+                        <p class="card-meta">
+                            <span><i class="far fa-calendar"></i> 12 avril 2025</span>
+                            <span><i class="far fa-comment"></i> 18 commentaires</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="/api/placeholder/400/300" alt="Playlist musicale">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Playlist</span>
+                        <h3 class="card-title">Top 10 des morceaux incontournables du printemps</h3>
+                        <p class="card-excerpt">Notre sélection des titres qui vont rythmer votre saison
+                             et ensoleiller vos journées.</p>
+                        <p class="card-meta">
+                            <span><i class="far fa-calendar"></i> 8 avril 2025</span>
+                            <span><i class="far fa-comment"></i> 7 commentaires</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="podcasts">
+            <h2 class="section-title">Derniers Podcasts</h2>
+            <div class="podcast-container">
+                <div class="podcast-artwork">
+                    <img src="/api/placeholder/200/200" alt="Podcast artwork">
+                </div>
+                <div class="podcast-details">
+                    <h3 class="podcast-title">Morning Pulse #42</h3>
+                    <p class="podcast-description">Réveillez-vous avec notre sélection de nouvelles sorties et d'actualités musicales fraîches.</p>
+                    <p><small><i class="far fa-calendar"></i> 24 avril 2025 | <i class="far fa-clock"></i> 45 minutes</small></p>
+                    <div class="podcast-player">
+                        <button class="player-btn"><i class="fas fa-play"></i></button>
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="podcast-container">
+                <img src="/api/placeholder/200/200" alt="Podcast artwork">
+            </div>
+            <div class="podcast-details">
+                <h3 class="podcast-title">Interview : Dans la tête d'un compositeur</h3>
+                <p class="podcast-description">DERECK JONES nous parle de son processus créatif et de sa vision 
+                    de la musique cHRETIENNE.</p>
+                <p><small><i class="far fa-calendar"></i> 20 avril 2025 | <i class="far fa-clock"></i> 62 minutes</small></p>
+                <div class="podcast-player">
+                    <button class="player-btn"><i class="fas fa-play"></i></button>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+            </div>
         </div>
- 
+    </section>
+
+    <section class="newsletter">
+        <h3>Restez connecté</h3>
+        <p>Abonnez-vous à notre newsletter pour recevoir les derniers articles, podcasts et actualités directement dans votre boîte mail.</p>
+        <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Votre adresse email" required>
+            <button type="submit" class="newsletter-btn">S'abonner</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-col">
+            <h4>Radio Pulse</h4>
+            <p>Votre source quotidienne de musique, d'actualités et de divertissement. Écoutez-nous en direct ou 
+                en podcast, où que vous soyez.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2F&is_from_rle" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://open.spotify.com/intl-fr/" class="social-icon"><i class="fab fa-spotify"></i></a>
+            </div>
+        </div>
+       
+        <div class="footer-col">
+            <h4>Catégories</h4>
+            <ul class="footer-links">
+                <li><a href="#">Actualités musicales</a></li>
+                <li><a href="#">Interviews</a></li>
+                <li><a href="#">Critiques d'albums</a></li>
+                <li><a href="#">Événements</a></li>
+                <li><a href="#">Playlists</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul class="footer-links">
+                <li><i class="fas fa-map-marker-alt"></i> 123 Rue de la Radio
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Rue de la Radio, Abidjan</li>
+                    <li><i class="fas fa-phone"></i> +225 05 96 28 13 96</li>
+                    <li><i class="fas fa-envelope"></i> KOUASSI@GMAIL.comr</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Radio Pulse. Tous droits réservés.</p>
+        </div>
     </footer>
 
-    <!-- Font Awesome pour les icônes -->
-    <script src="javascript.js" crossorigin="anonymous"></script>
+ 
 </body>
 </html>
