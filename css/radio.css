@@ -242,7 +242,7 @@ main {
 }
 
 .card-excerpt {
-    color: #d1d1e0;
+    color: #0a0a0c;
     margin-bottom: 1rem;
 }
 
@@ -250,7 +250,7 @@ main {
     display: flex;
     justify-content: space-between;
     font-size: 0.9rem;
-    color: #b8b8d4;
+    color: #0d0d13;
 }
 .featured-posts {
     margin-bottom: 4rem;
