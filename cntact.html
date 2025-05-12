@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog de Radio Chrétienne - Actualités, enseignements et méditations pour nourrir votre foi">
+    <title>Blog de Radio Chrétienne - Actualités et enseignements</title>
+    <link rel="stylesheet" href="css/cntact.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <i class="fas fa-cross fa-2x"></i>
+                <h1>Radio Chrétienne</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#">Émissions</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="podcast.html">Podcasts</a></li>
+                <li><a href="dn.html">soutenir</a></li>
+                <li><a href="cntact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+  <main class="main-content">
+    <div class="form-container">
+      <h1 class="form-title">Contactez-nous</h1>
+      <form id="contact-form">
+        <div class="form-group">
+          <input type="text" id="name" name="name" required>
+          <label for="name">Nom complet</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="email" required>
+          <label for="email">Adresse email</label>
+        </div>
+        <div class="form-group">
+          <input type="tel" id="phone" name="phone" required>
+          <label for="phone">Numéro de téléphone</label>
+        </div>
+        <div class="form-group">
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <label for="message">Votre message</label>
+        </div>
+        <button type="submit" class="submit-btn">Envoyer</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="javascript/contact.js"></script>
+</body>
+</html>

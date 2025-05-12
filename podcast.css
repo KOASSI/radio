@@ -1,0 +1,330 @@
+:root {
+    --primary-color: #ffffff; /* Light background */
+    --secondary-color: #ff4785; /* Brighter secondary color */
+    --accent-color: #4a90e2; /* Bright accent color */
+    --text-color: #333333; /* Darker text color */
+    --light-bg: #f0f0f0; /* Light background for sections */
+    --font-main: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+header {
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles pour la section Podcast */
+.podcasts {
+    margin: 4rem 0;
+}
+
+.podcast-container {
+    display: flex;
+    background: var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-speed) ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.podcast-container:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.podcast-artwork {
+    width: 120px;
+    height: 120px;
+    min-width: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.podcast-artwork img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.podcast-container:hover .podcast-artwork img {
+    transform: scale(1.05);
+}
+
+.podcast-details {
+    flex: 1;
+}
+
+.podcast-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.podcast-meta {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.8rem;
+}
+
+.podcast-description {
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.podcast-player {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.player-btn {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.player-btn:hover {
+    background: var(--accent-color);
+    transform: scale(1.05);
+}
+
+.progress-bar {
+    flex: 1;
+    height: 6px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    margin-right: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+    border-radius: 3px;
+}
+
+.current-time, .duration {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.podcast-actions {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.btn-outline:hover {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .podcast-container {
+        flex-direction: column;
+    }
+    
+    .podcast-artwork {
+        width: 100%;
+        height: 180px;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .podcast-player {
+        flex-wrap: wrap;
+    }
+    
+    .progress-bar {
+        width: 100%;
+        margin: 0.5rem 0;
+        order: 1;
+    }
+}
+
+footer {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    padding: 50px 0 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+    color: #0a0909;
+}
+
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 50px;
+    height: 2px;
+    background-color: #e91e63;
+}
+
+.footer-col p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #0f0b0b;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: #333;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #0f0d0d;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #e91e63;
+    padding-left: 5px;
+}
+
+.footer-links i {
+    color: #e91e63;
+    width: 20px;
+    text-align: center;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 30px;
+    border-top: 1px solid #444;
+    font-size: 14px;
+    color: #0c0b0b;
+}
