@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog de Webradio</title>
+    <meta name="description" content="Blog de Radio Chrétienne - Actualités, enseignements et méditations pour nourrir votre foi">
+    <title>Blog de Radio Chrétienne - Actualités et enseignements</title>
     <link rel="stylesheet" href="css/radio.css">
-    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <nav class="nav-container">
             <div class="logo">
-                <i class="fas fa-broadcast-tower fa-2x"></i>
-                <h1>Radio Chretienne</h1>
+                <i class="fas fa-cross fa-2x"></i>
+                <h1>Radio Chrétienne</h1>
             </div>
             <ul class="nav-links">
-                <li><a href="radio.html">Accueil</a></li>
+                <li><a href="index.html">Accueil</a></li>
                 <li><a href="#">Émissions</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Podcasts</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="podcast.html">Podcasts</a></li>
                 <li><a href="#">À propos</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="cntact.html">Contact</a></li>
             </ul>
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
@@ -40,13 +40,16 @@
                     <div class="on-air-indicator"></div>
                     <span>EN DIRECT</span>
                 </div>
-                <h2>Bienvenue sur le Blog de Radio GOSPEL</h2>
-                <p>Découvrez les dernières actualités musicales, interviews exclusives et récits des coulisses 
-                    de votre webradio préférée.</p>
-                <a href="#" class="btn">Écouter en direct <i class="fas fa-play"></i></a>
+                <h2>Bienvenue sur le Blog de Radio Chrétienne</h2>
+                <p>Découvrez les dernières actualités, enseignements bibliques, témoignages 
+                    inspirants et méditations pour nourrir votre foi quotidienne.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn primary">Écouter en direct <i class="fas fa-play"></i></a>
+                    <a href="#" class="btn secondary">Programme hebdo <i class="fas fa-calendar-alt"></i></a>
+                </div>
             </div>
             <div class="hero-image">
-                <img src="" alt="Radio Studio">
+                <img src="images/bible-study.jpg" alt="Étude biblique en groupe">
             </div>
         </section>
 
@@ -54,33 +57,37 @@
             <h2 class="section-title">À la Une</h2>
             <div class="featured-post">
                 <div class="featured-image">
-                    <img src="" alt="Article à la une">
+                    <img src="images/pasteur-interview.jpg" alt="Interview d'un pasteur">
+                    <div class="image-overlay"></div>
                 </div>
                 <div class="featured-content">
                     <span class="card-tag">Interview</span>
-                    <h3 class="featured-title">Interview exclusive avec DJ Electro</h3>
-                    <p class="featured-excerpt">DJ Electro nous dévoile ses influences, son processus créatif et ses projets à venir dans cette interview exclusive pour Radio Pulse.</p>
+                    <h3 class="featured-title">Rencontre avec le Pasteur Mohamed Sanogo</h3>
+                    <p class="featured-excerpt">Dans cette interview exclusive, le Pasteur MOhamed partage sur la sagesse, sa vision pour 
+                        l'Église Vase D'honneuer etendre sur tous le monde. parlez de JESUS.</p>
                     <p class="card-meta">
                         <span><i class="far fa-calendar"></i> 25 avril 2025</span>
-                        <span><i class="far fa-comment"></i> 24 commentaires</span>
+                        <span><i class="far fa-comment"></i> 0 commentaires</span>
+                        <span><i class="fas fa-bible"></i> Jean 3:16</span>
                     </p>
-                    <a href="#" class="btn">Lire l'article</a>
+                    <a href="#" class="btn">Lire l'article <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="featured-post">
                 <div class="featured-image">
-                    <img src="" alt="Festival de musique">
+                    <img src="images/worship-event.jpg" alt="Concert de louange">
+                    <div class="image-overlay"></div>
                 </div>
                 <div class="featured-content">
                     <span class="card-tag">Événement</span>
-                    <h3 class="featured-title">Festival Soundwave 2025 : Tout ce que vous devez savoir</h3>
-                    <p class="featured-excerpt">Préparez-vous pour le plus grand festival de l'été ! Notre guide complet sur
-                         les artistes, la programmation et les conseils pour en profiter au maximum.</p>
+                    <h3 class="featured-title">Festival de Louange 2025 : Préparons nos cœurs</h3>
+                    <p class="featured-excerpt">Tout ce que vous devez savoir sur le plus grand rassemblement de louange de l'année : intervenants, programme spirituel et conseils pour en tirer le meilleur profit.</p>
                     <p class="card-meta">
                         <span><i class="far fa-calendar"></i> 20 avril 2025</span>
                         <span><i class="far fa-comment"></i> 16 commentaires</span>
+                        <span><i class="fas fa-bible"></i> Psaume 150:6</span>
                     </p>
-                    <a href="#" class="btn">Lire l'article</a>
+                    <a href="#" class="btn">Lire l'article <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </section>
@@ -90,50 +97,56 @@
             <div class="cards-container">
                 <div class="card">
                     <div class="card-image">
-                        <img src="" alt="Artiste en concert">
+                        <img src="images/bible-study-2.jpg" alt="Étude biblique">
+                        <div class="image-overlay"></div>
                     </div>
                     <div class="card-content">
-                        <span class="card-tag">Critique</span>
-                        <h3 class="card-title">Critique du dernier album de MORIJAH</h3>
-                        <p class="card-excerpt">Un voyage sonore entre rêve et réalité qui marque un tournant dans
-                             la carrière de l'artiste.</p>
+                        <span class="card-tag">Enseignement</span>
+                        <h3 class="card-title">Comment étudier la Bible efficacement</h3>
+                        <p class="card-excerpt">Découvrez des méthodes pratiques pour approfondir votre étude des Écritures et en tirer des applications concrètes pour votre vie.</p>
                         <p class="card-meta">
                             <span><i class="far fa-calendar"></i> 15 avril 2025</span>
                             <span><i class="far fa-comment"></i> 9 commentaires</span>
                         </p>
+                        <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-image">
-                        <img src="" alt="Studio d'enregistrement">
+                        <img src="images/family-prayer.jpg" alt="Famille en prière">
+                        <div class="image-overlay"></div>
                     </div>
                     <div class="card-content">
-                        <span class="card-tag">Technologie</span>
-                        <h3 class="card-title">Les meilleurs équipements pour créer votre home studio</h3>
-                        <p class="card-excerpt">Découvrez notre sélection d'équipements essentiels pour monter 
-                            votre studio 
-                            à domicile.</p>
+                        <span class="card-tag">Vie pratique</span>
+                        <h3 class="card-title">10 clés pour une vie de famille chrétienne équilibrée</h3>
+                        <p class="card-excerpt">Des conseils bibliques pour construire une famille solide sur le fondement de la Parole de Dieu.</p>
                         <p class="card-meta">
                             <span><i class="far fa-calendar"></i> 12 avril 2025</span>
                             <span><i class="far fa-comment"></i> 18 commentaires</span>
                         </p>
+                        <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-image">
-                        <img src="" alt="Playlist musicale">
+                        <img src="images/worship-music.jpg" alt="Musique de louange">
+                        <div class="image-overlay"></div>
                     </div>
                     <div class="card-content">
-                        <span class="card-tag">Playlist</span>
-                        <h3 class="card-title">Top 10 des morceaux incontournables du printemps</h3>
-                        <p class="card-excerpt">Notre sélection des titres qui vont rythmer votre saison
-                             et ensoleiller vos journées.</p>
+                        <span class="card-tag">Musique</span>
+                        <h3 class="card-title">Top 10 des chants de louange qui ont marqué 2025</h3>
+                        <p class="card-excerpt">Notre sélection des chants qui ont inspiré et accompagné les
+                             chrétiens à travers le monde cette année.</p>
                         <p class="card-meta">
                             <span><i class="far fa-calendar"></i> 8 avril 2025</span>
                             <span><i class="far fa-comment"></i> 7 commentaires</span>
                         </p>
+                        <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
+            </div>
+            <div class="view-all-container">
+                <a href="#" class="btn outline">Voir tous les articles <i class="fas fa-chevron-right"></i></a>
             </div>
         </section>
 
@@ -141,92 +154,141 @@
             <h2 class="section-title">Derniers Podcasts</h2>
             <div class="podcast-container">
                 <div class="podcast-artwork">
-                    <img src="/api/placeholder/200/200" alt="Podcast artwork">
+                    <img src="images/podcast-1.jpg" alt="Podcast étude biblique">
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
                 </div>
                 <div class="podcast-details">
-                    <h3 class="podcast-title">Morning Pulse #42</h3>
-                    <p class="podcast-description">Réveillez-vous avec notre sélection de nouvelles sorties et d'actualités musicales fraîches.</p>
-                    <p><small><i class="far fa-calendar"></i> 24 avril 2025 | <i class="far fa-clock"></i> 45 minutes</small></p>
-                    <div class="podcast-player">
-                        <button class="player-btn"><i class="fas fa-play"></i></button>
-                        <div class="progress-bar">
-                            <div class="progress"></div>
-                        </div>
+                    <h3 class="podcast-title">Étude biblique : L'épître aux Romains #12</h3>
+                    <p class="podcast-description">Rev. Dr Edmond Kouamé n’est pas de ceux qui se contentent de prêcher dans l’ombre l’Évangile de Jésus-Christ.
+
+                        Il prend la lumière de la parole de Dieu, non par vanité, mais pour rappeler aux consciences endormies que la foi et la responsabilité spirituelle
+                         doivent aussi prendre place sur la scène socio-politique nationale.</p>
+                    <p class="podcast-meta"><i class="far fa-calendar"></i> 24 avril 2025 | <i class="far fa-clock"></i> 45 minutes</p>
+                    <div class="podcast-actions">
+                        <button class="btn small"><i class="fas fa-play"></i> Écouter</button>
+                        <button class="btn small outline"><i class="fas fa-download"></i> Télécharger</button>
+                        <button class="btn small outline"><i class="fas fa-share-alt"></i> Partager</button>
                     </div>
                 </div>
             </div>
             <div class="podcast-container">
-                <img src="/api/placeholder/200/200" alt="Podcast artwork">
-            </div>
-            <div class="podcast-details">
-                <h3 class="podcast-title">Interview : Dans la tête d'un compositeur</h3>
-                <p class="podcast-description">DERECK JONES nous parle de son processus créatif et de sa vision 
-                    de la musique cHRETIENNE.</p>
-                <p><small><i class="far fa-calendar"></i> 20 avril 2025 | <i class="far fa-clock"></i> 62 minutes</small></p>
-                <div class="podcast-player">
-                    <button class="player-btn"><i class="fas fa-play"></i></button>
-                    <div class="progress-bar">
-                        <div class="progress"></div>
+                <div class="podcast-artwork">
+                    <img src="images/podcast-2.jpg" alt="Podcast témoignage">
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="podcast-details">
+                    <h3 class="podcast-title">Côte d’Ivoire : Le Rév. Dr Edmond Kouamé interpelle le monde chrétien
+                         face à la situation du pays</h3>
+                    <p class="podcast-description">Les tensions politiques planent comme une épée de Damoclès au-dessus de 
+                        la nation ivoirienne. Dans ce climat de fébrilité latente, une voix prophétique s’élève pour avertir. 
+                        Il s’agit de celle du Révérend Dr Edmond Kouamé, serviteur de Dieu établi à Abidjan, dans la commune de Yopougon, et fondateur de l’espace « Shalom ». Il est le leader de la Mission 
+                        Évangélique MIFOC et guide le Camp de Prière « La Nouvelle Jérusalem », dirigé par son épouse.</p>
+                    <p class="podcast-meta"><i class="far fa-calendar"></i> 20 avril 2025 | <i class="far fa-clock"></i> 62 minutes</p>
+                    <div class="podcast-actions">
+                        <button class="btn small"><i class="fas fa-play"></i> Écouter</button>
+                        <button class="btn small outline"><i class="fas fa-download"></i> Télécharger</button>
+                        <button class="btn small outline"><i class="fas fa-share-alt"></i> Partager</button>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="newsletter">
-        <h3>Restez connecté</h3>
-        <p>Inscrivez-vous à notre newsletter
-             et recevez chaque matin "La Pensée du Jour", "
-             Le verset du Jour - PassLeMot" et toutes les nouveautés TopChrétien Musique, 
-             TopTV, TopMessages, etc. KOUASSI JEAN PAUL, notre directeur, vous dévoilera les coulisses,
-              les projets et les nouveautés en exclusivité ! Restez connecté(e) !
-        </p>
-        <form class="newsletter-form">
-            <input type="email" class="newsletter-input" placeholder="Votre adresse email" required>
-            <button type="submit" class="newsletter-btn">S'abonner</button>
-        </form>
-    </section>
-</main>
-
-<footer>
-    <div class="footer-container">
-        <div class="footer-col">
-            <h4>Radio Pulse</h4>
-            <p>Votre source quotidienne de musique, d'actualités et de divertissement. Écoutez-nous en direct ou 
-                en podcast, où que vous soyez.</p>
-            <div class="social-links">
-                <a href="https://www.facebook.com/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://x.com/" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2F&is_from_rle" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="https://open.spotify.com/intl-fr/" class="social-icon"><i class="fab fa-spotify"></i></a>
+            <div class="view-all-container">
+                <a href="#" class="btn outline">Voir tous les podcasts <i class="fas fa-chevron-right"></i></a>
             </div>
-        </div>
-       
-        <div class="footer-col">
-            <h4>Catégories</h4>
-            <ul class="footer-links">
-                <li><a href="#">Actualités musicales</a></li>
-                <li><a href="#">Interviews</a></li>
-                <li><a href="#">Critiques d'albums</a></li>
-                <li><a href="#">Événements</a></li>
-                <li><a href="#">Playlists</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Contact</h4>
-            <ul class="footer-links">
-                <li><i class="fas fa-map-marker-alt"></i> 123 Rue de la Radio
-                    <li><i class="fas fa-map-marker-alt"></i> 123 Rue de la Radio, Abidjan</li>
+        </section>
+
+        <section class="verse-of-day">
+            <div class="verse-container">
+                <div class="verse-content">
+                    <h3>Verset du jour</h3>
+                    <p class="verse-text">"Oui, c’est Dieu qui nous a faits. Il nous a créés dans le Christ Jésus pour que
+                         nous menions une vie riche en actions
+                         bonnes. Et ces actions, Dieu les a préparées pour que nous les fassions"</p>
+                    <p class="verse-reference">Éphésiens 2:10</p>
+                    <button class="btn outline white"><i class="fas fa-share"></i> Partager ce verset</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="newsletter-container">
+                <div class="newsletter-text">
+                    <h3>Restez connecté</h3>
+                    <p>Abonnez-vous à notre newsletter et recevez chaque matin "La Pensée du Jour", le verset biblique du jour, ainsi que les dernières actualités, enseignements et événements chrétiens.</p>
+                </div>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Votre nom" required>
+                        <input type="email" placeholder="Votre adresse email" required>
+                    </div>
+                    <button type="submit" class="btn">S'abonner <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <i class="fas fa-cross"></i>
+                    <h4>Radio Chrétienne</h4>
+                </div>
+                <p>Votre source quotidienne d'enseignements bibliques, de louanges et d'actualités chrétiennes. 
+                    Écoutez-nous en direct ou en podcast, où que vous soyez.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/results?search_query=derek+jones" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+           
+            <div class="footer-col">
+                <h4>Catégories</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Enseignements bibliques</a></li>
+                    <li><a href="#">Témoignages</a></li>
+                    <li><a href="#hero">Vie pratique chrétienne</a></li>
+                    <li><a href="#">Événements</a></li>
+                    <li><a href="podcast.html">Musique chrétienne</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Liens utiles</h4>
+                <ul class="footer-links">
+                    <li><a href="dn.html">Programme hebdomadaire</a></li>
+                    <li><a href="#">Émissions en replay</a></li>
+                    <li><a href="dn.html">Faire un don</a></li>
+                    <li><a href="dn.html">Devenir partenaire</a></li>
+                    <li><a href="cntact.html">Nous rejoindre</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Avenue de la Foi, Abidjan</li>
                     <li><i class="fas fa-phone"></i> +225 05 96 28 13 96</li>
-                    <li><i class="fas fa-envelope"></i> KOUASSI@GMAIL.comr</li>
+                    <li><i class="fas fa-envelope"></i> contact@radiochretienne.ci</li>
+                    <li><i class="fas fa-clock"></i> Lun-Ven: 8h-18h</li>
                 </ul>
             </div>
         </div>
-        <div class="copyright">
-            <p>&copy; 2025 Radio Pulse. Tous droits réservés.</p>
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>&copy; 2025 Radio Chrétienne. Tous droits réservés.</p>
+            </div>
+            <div class="footer-links-bottom">
+                <a href="#">Mentions légales</a>
+                <a href="#">Politique de confidentialité</a>
+                <a href="#">Conditions d'utilisation</a>
+            </div>
         </div>
     </footer>
-
- <SCript src="javascript/radio.js"></SCript>
+    <script src="javascript/radio.js"></script>
 </body>
 </html>
