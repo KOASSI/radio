@@ -6,6 +6,7 @@
     --light-bg: #f0f0f0; /* Light background for sections */
     --font-main: 'Montserrat', sans-serif;
 }
+
 body {
     font-family: var(--font-main);
     background-color: var(--primary-color);
@@ -22,7 +23,6 @@ header {
     width: 100%;
     z-index: 1000;
 }
-
 
 * {
     margin: 0;
@@ -63,10 +63,11 @@ header {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 }
+
 .nav-links a:hover {
-    color: var(--accent-color); 
+    color: var(--accent-color);
 }
 
 .burger {
@@ -81,6 +82,7 @@ header {
     margin: 5px;
     transition: all 0.3s ease;
 }
+
 .on-air {
     display: flex;
     align-items: center;
@@ -98,12 +100,9 @@ header {
 }
 
 @keyframes pulse {
-    0% { opacity: 1; }
+    0%, 100% { opacity: 1; }
     50% { opacity: 0.5; }
-    100% { opacity: 1; }
 }
-
-
 
 main {
     max-width: 1200px;
@@ -121,7 +120,7 @@ main {
     background: var(--light-bg);
     padding: 2rem;
 }
-     
+
 .hero-text {
     flex: 1;
     padding-right: 2rem;
@@ -146,14 +145,15 @@ main {
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; 
-
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .btn:hover {
     background: var(--accent-color);
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
 .hero-image {
     flex: 1;
     text-align: center;
@@ -198,7 +198,7 @@ main {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
@@ -252,6 +252,7 @@ main {
     font-size: 0.9rem;
     color: #0d0d13;
 }
+
 .featured-posts {
     margin-bottom: 4rem;
 }
@@ -271,8 +272,8 @@ main {
 }
 
 .featured-image img {
-    width: 50%;
-    height: 60%;
+    width: 100%;
+    height: auto;
     object-fit: cover;
 }
 
@@ -313,14 +314,15 @@ main {
 }
 
 .podcast-artwork img {
-    width: 50%;
-    height: 60%;
+    width: 100%;
+    height: auto;
     object-fit: cover;
 }
 
 .podcast-details {
     flex: 1;
 }
+
 .podcast-title {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
@@ -355,6 +357,7 @@ main {
 .player-btn:hover {
     background: var(--accent-color);
 }
+
 .progress-bar {
     flex: 1;
     height: 6px;
@@ -368,7 +371,7 @@ main {
     top: 0;
     left: 0;
     height: 100%;
-    width: 30%;
+    width: 30%; /* Dynamic width can be set via JS */
     background: var(--secondary-color);
     border-radius: 3px;
 }
@@ -385,6 +388,7 @@ main {
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
+
 footer {
     background-color: var(--light-bg);
     color: var(--text-color);
@@ -451,7 +455,6 @@ footer {
 .social-icon:hover {
     background-color: var(--secondary-color);
     transform: translateY(-3px);
-    transition: transform 0.3s ease; /* Smooth hover effect */
 }
 
 .footer-links {
@@ -490,7 +493,7 @@ footer {
     margin-top: 30px;
     border-top: 1px solid #444;
     font-size: 14px;
-    color: #bbb;
+    color: #0c0b0b;
 }
 
 /* Responsive adjustments */
@@ -503,5 +506,19 @@ footer {
     .footer-col {
         min-width: 100%;
     }
-}
 
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .btn {
+        width: 100%; /* Full width for buttons in smaller screens */
+        margin: 0 auto;
+    }
+}
