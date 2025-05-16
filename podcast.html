@@ -9,6 +9,92 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Styles généraux */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        
+        /* Styles du lecteur audio */
+        .podcast-player {
+            margin-top: 15px;
+            position: relative;
+        }
+        
+        .player-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        
+        .player-btn:hover {
+            background-color: #3e8e41;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 5px;
+            background-color: #ddd;
+            border-radius: 5px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        
+        .progress {
+            height: 100%;
+            width: 0%;
+            background-color: #4CAF50;
+            border-radius: 5px;
+            transition: width 0.1s;
+        }
+        
+        .time-display {
+            font-size: 12px;
+            color: #666;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .podcast-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .btn {
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-sm {
+            padding: 6px 10px;
+            font-size: 13px;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid #4CAF50;
+            color: #4CAF50;
+        }
+        
+        .btn-outline:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -34,148 +120,207 @@
     </header>
 
     <!-- Section Podcasts -->
-<section class="podcasts">
-    <div class="section-title">
-        <h2>Nos Podcasts</h2>
-    </div>
-
-    <!-- Podcast 1 -->
-    <div class="podcast-container">
-        <div class="podcast-artwork">
-            <img src="https://via.placeholder.com/300" alt="Artwork du podcast">
+    <section class="podcasts">
+        <div class="section-title">
+            <h2>Nos Podcasts</h2>
         </div>
-        
-        <div class="podcast-details">
-            <h3 class="podcast-title">Nom du Podcast</h3>
-            <p class="podcast-meta">enfant beni</p>
-            <p class="podcast-description">ks bloom album reussit 
-            </p>
+
+        <!-- Podcast 1 -->
+        <div class="podcast-container">
+            <div class="podcast-artwork">
+                <img src="https://via.placeholder.com/300" alt="Artwork du podcast">
+            </div>
             
-            <div class="podcast-player">
-                <button class="player-btn">
-                    <i class="fas fa-play"></i>
-                </button>
+            <div class="podcast-details">
+                <h3 class="podcast-title">Nom du Podcast</h3>
+                <p class="podcast-meta">enfant beni</p>
+                <p class="podcast-description">ks bloom album reussit</p>
                 
-                <div class="progress-bar">
-                    <div class="progress"></div>
+                <div class="podcast-player">
+                    <button class="player-btn" data-audio="audio1">
+                        <i class="fas fa-play"></i> écouter
+                    </button>
+                    <audio id="audio1" src="image/Betty Onanga - Je nai que Jésus (Audio officiel).mp3"></audio>
+                    <div class="progress-bar" data-audio="audio1">
+                        <div class="progress" data-audio="audio1"></div>
+                    </div>
+                    <div class="time-display">
+                        <span class="current-time" data-audio="audio1">00:00</span>
+                        <span class="duration" data-audio="audio1">00:00</span>
+                    </div>
                 </div>
                 
-                <span class="current-time">00:00</span>
-                <span class="duration"> / 45:12</span>
-            </div>
-            
-            <div class="podcast-actions">
-                <button class="btn btn-sm">
-                    <i class="fas fa-download"></i> Télécharger
-                </button>
-                <button class="btn btn-sm btn-outline">
-                    <i class="fas fa-share-alt"></i> Partager
-                </button>
+                <div class="podcast-actions">
+                    <button class="btn btn-sm download-btn" data-file="Betty Onanga - Je nai que Jésus (Audio officiel).mp3">
+                        <i class="fas fa-download"></i> Télécharger
+                    </button>
+                    <button class="btn btn-sm btn-outline share-btn" data-title="Nom du Podcast" data-text="Écoutez ce podcast inspirant">
+                        <i class="fas fa-share-alt"></i> Partager
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Podcast 2 -->
-    <div class="podcast-container">
-        <div class="podcast-artwork">
-            <img src="https://via.placeholder.com/300" alt="Artwork du podcast">
-        </div>
-        
-        <div class="podcast-details">
-            <h3 class="podcast-title">Interview Exclusive</h3>
-            <p class="podcast-meta">mon defensseur</p>
-            <p class="podcast-description">morijah
-              .</p>
+        <!-- Podcast 2 -->
+        <div class="podcast-container">
+            <div class="podcast-artwork">
+                <img src="https://via.placeholder.com/300" alt="Artwork du podcast">
+            </div>
             
-            <div class="podcast-player">
-                <button class="player-btn">
-                    <i class="fas fa-play"></i>
-                </button>
+            <div class="podcast-details">
+                <h3 class="podcast-title">Interview Exclusive</h3>
+                <p class="podcast-meta">mon defensseur</p>
+                <p class="podcast-description">morijah</p>
                 
-                <div class="progress-bar">
-                    <div class="progress" style="width: 65%"></div>
+                <div class="podcast-player">
+                    <button class="player-btn" data-audio="audio2">
+                        <i class="fas fa-play"></i> écouter
+                    </button>
+                    <audio id="audio2" src="image/Betty Onanga - Je nai que Jésus (Audio officiel).mp3"></audio>
+                    <div class="progress-bar" data-audio="audio2">
+                        <div class="progress" data-audio="audio2"></div>
+                    </div>
+                    <div class="time-display">
+                        <span class="current-time" data-audio="audio2">00:00</span>
+                        <span class="duration" data-audio="audio2">00:00</span>
+                    </div>
                 </div>
                 
-                <span class="current-time">21:45</span>
-                <span class="duration"> / 32:10</span>
+                <div class="podcast-actions">
+                    <button class="btn btn-sm download-btn" data-file="Betty Onanga - Je nai que Jésus (Audio officiel).mp3">
+                        <i class="fas fa-download"></i> Télécharger
+                    </button>
+                    <button class="btn btn-sm btn-outline share-btn" data-title="Interview Exclusive" data-text="Découvrez cette interview inspirante">
+                        <i class="fas fa-share-alt"></i> Partager
+                    </button>
+                </div>
             </div>
+        </div>
+
+        <!-- Bouton Voir Plus -->
+        <div class="text-center" style="margin-top: 2rem;">
+            <a href="#" class="btn btn-outline">
+                <i class="fas fa-arrow-right"></i> Voir tous les podcasts
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <!-- Votre footer existant -->
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fonction pour formater le temps (mm:ss)
+            function formatTime(seconds) {
+                const minutes = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+            }
             
-            <div class="podcast-actions">
-                <button class="btn btn-sm">
-                    <i class="fas fa-download"></i> Télécharger
-                </button>
-                <button class="btn btn-sm btn-outline">
-                    <i class="fas fa-share-alt"></i> Partager
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bouton Voir Plus -->
-    <div class="text-center" style="margin-top: 2rem;">
-        <a href="#" class="btn btn-outline">
-            <i class="fas fa-arrow-right"></i> Voir tous les podcasts
-        </a>
-    </div>
-</section>
-
-<footer>
-    <div class="footer-container">
-        <div class="footer-col">
-            <div class="footer-logo">
-                <i class="fas fa-cross"></i>
-                <h4>Radio Chrétienne</h4>
-            </div>
-            <p>Votre source quotidienne d'enseignements bibliques, de louanges et d'actualités chrétiennes. 
-                Écoutez-nous en direct ou en podcast, où que vous soyez.</p>
-            <div class="social-links">
-                <a href="https://www.facebook.com/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.youtube.com/results?search_query=derek+jones" class="social-icon"><i class="fab fa-youtube"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-            </div>
-        </div>
-       
-        <div class="footer-col">
-            <h4>Catégories</h4>
-            <ul class="footer-links">
-                <li><a href="#">Enseignements bibliques</a></li>
-                <li><a href="#">Témoignages</a></li>
-                <li><a href="#hero">Vie pratique chrétienne</a></li>
-                <li><a href="#">Événements</a></li>
-                <li><a href="podcast.html">Musique chrétienne</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Liens utiles</h4>
-            <ul class="footer-links">
-                <li><a href="dn.html">Programme hebdomadaire</a></li>
-                <li><a href="#">Émissions en replay</a></li>
-                <li><a href="dn.html">Faire un don</a></li>
-                <li><a href="dn.html">Devenir partenaire</a></li>
-                <li><a href="cntact.html">Nous rejoindre</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Contact</h4>
-            <ul class="footer-contact">
-                <li><i class="fas fa-map-marker-alt"></i> 123 Avenue de la Foi, Abidjan</li>
-                <li><i class="fas fa-phone"></i> +225 05 96 28 13 96</li>
-                <li><i class="fas fa-envelope"></i> contact@radiochretienne.ci</li>
-                <li><i class="fas fa-clock"></i> Lun-Ven: 8h-18h</li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <div class="copyright">
-            <p>&copy; 2025 Radio Chrétienne. Tous droits réservés.</p>
-        </div>
-        <div class="footer-links-bottom">
-            <a href="#">Mentions légales</a>
-            <a href="#">Politique de confidentialité</a>
-            <a href="#">Conditions d'utilisation</a>
-        </div>
-    </div>
-</footer>
+            // Gestion des lecteurs audio
+            document.querySelectorAll('.player-btn').forEach(button => {
+                const audioId = button.getAttribute('data-audio');
+                const audio = document.getElementById(audioId);
+                const progressBar = document.querySelector(`.progress-bar[data-audio="${audioId}"] .progress`);
+                const currentTime = document.querySelector(`.current-time[data-audio="${audioId}"]`);
+                const duration = document.querySelector(`.duration[data-audio="${audioId}"]`);
+                const progressContainer = document.querySelector(`.progress-bar[data-audio="${audioId}"]`);
+                
+                // Mise à jour du temps
+                audio.addEventListener('timeupdate', function() {
+                    if (!isNaN(audio.duration)) {
+                        const progress = (audio.currentTime / audio.duration) * 100;
+                        progressBar.style.width = progress + '%';
+                        currentTime.textContent = formatTime(audio.currentTime);
+                        duration.textContent = formatTime(audio.duration);
+                    }
+                });
+                
+                // Chargement des métadonnées
+                audio.addEventListener('loadedmetadata', function() {
+                    if (!isNaN(audio.duration)) {
+                        duration.textContent = formatTime(audio.duration);
+                    }
+                });
+                
+                // Clic sur la barre de progression
+                progressContainer.addEventListener('click', function(e) {
+                    const width = this.clientWidth;
+                    const clickX = e.offsetX;
+                    const duration = audio.duration;
+                    audio.currentTime = (clickX / width) * duration;
+                });
+                
+                // Gestion du bouton play/pause
+                button.addEventListener('click', function() {
+                    const icon = this.querySelector('i');
+                    
+                    if (audio.paused) {
+                        // Arrêter tous les autres audios
+                        document.querySelectorAll('audio').forEach(a => {
+                            if (a !== audio) {
+                                a.pause();
+                                const otherBtn = document.querySelector(`.player-btn[data-audio="${a.id}"]`);
+                                if (otherBtn) {
+                                    otherBtn.querySelector('i').className = 'fas fa-play';
+                                }
+                            }
+                        });
+                        
+                        audio.play();
+                        icon.className = 'fas fa-pause';
+                    } else {
+                        audio.pause();
+                        icon.className = 'fas fa-play';
+                    }
+                });
+            });
+            
+            // Gestion du téléchargement
+            document.querySelectorAll('.download-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const fileName = this.getAttribute('data-file');
+                    const filePath = 'image/' + fileName;
+                    
+                    // Créer un lien temporaire pour le téléchargement
+                    const link = document.createElement('a');
+                    link.href = filePath;
+                    link.download = fileName;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                });
+            });
+            
+            // Gestion du partage
+            document.querySelectorAll('.share-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const title = this.getAttribute('data-title');
+                    const text = this.getAttribute('data-text');
+                    const url = window.location.href;
+                    
+                    if (navigator.share) {
+                        navigator.share({
+                            title: title,
+                            text: text,
+                            url: url
+                        }).catch(err => {
+                            console.log('Erreur de partage:', err);
+                            fallbackShare(title, text, url);
+                        });
+                    } else {
+                        fallbackShare(title, text, url);
+                    }
+                });
+            });
+            
+            // Fallback pour le partage si l'API Web Share n'est pas disponible
+            function fallbackShare(title, text, url) {
+                const shareText = `${title}\n${text}\n\n${url}`;
+                prompt("Copiez ce lien pour partager:", shareText);
+            }
+        });
+    </script>
 </body>
+</html>
