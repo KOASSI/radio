@@ -1,4 +1,13 @@
 /* Reset et Base avec animation de fond */
+:root {
+    --primary-color: #ffffff; /* Light background */
+    --secondary-color: #ff4785; /* Brighter secondary color */
+    --accent-color: #4a90e2; /* Bright accent color */
+    --text-color: #333333; /* Darker text color */
+    --light-bg: #f0f0f0; /* Light background for sections */
+    --font-main: 'Montserrat', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +18,7 @@
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
-    background: linear-gradient(-45deg, #f8f9fa, #eef2f5, #f8f9fa);
+    background: linear-gradient (--primary-color);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
     min-height: 100vh;
@@ -23,8 +32,8 @@
   
   /* Header avec animation d'entrée */
   header {
-    background-color:  #edf2f8;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+     background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    box-shadow: 0 2px 20px   rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
     top: 0;
